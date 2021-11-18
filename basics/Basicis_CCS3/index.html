@@ -1,0 +1,223 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS3 Refresher</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            p:active {
+                color: red;
+            }
+            h1:hover {
+                color: orangered;
+                background-color: green;
+            }
+
+            #anchor:link {
+                color:greenyellow;
+            }
+
+            #anchor:visited {
+                color:purple;
+            }
+
+            p::before {
+                content: "Before";
+                color: red;
+            }
+
+            p::after {
+                content: "After";
+                color: red;
+            }
+
+            div h1:first-child {
+                color: orange;
+            }
+
+            div h1:last-child {
+                color:rgb(71, 49, 16);
+            }
+        </style>
+    </head>
+    <body>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+        <div id="id1">
+            <ul>
+                <li>Cat</li>
+                <li>Dog</li>
+                <li>Rat</li>
+            </ul>
+
+            <ol>
+                <li>Cat</li>
+                <li>Dog</li>
+                <li>Rat</li>
+            </ol>
+            <p>This is a paragraph</p>
+        </div>
+
+        <ul>
+            <li>Cat</li>
+            <li>Dog</li>
+            <li>Rat</li>
+        </ul>
+
+        <!-- Hover -->
+        <h1>Heading</h1>
+
+        <!-- Link, active, visited -->
+        <a id="anchor" href="https://www.instagram.com">Instagram</a>
+
+        <!-- ::after ::before -->
+        <p>This is a paragraph</p>
+
+        <!-- First child, Last child -->
+        <div>
+            <h1>Heading1</h1>
+            <h1>Heading2</h1>
+            <h1>Heading3</h1>
+        </div>
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+        <!-- CSS box model, padding and margins 
+        (padding=To create a space inside the elements)
+        (margins=To create a space outside the elements)-->
+
+        <img 
+            src="assests/porsche.jpg" 
+            alt="porsche logo" 
+            style="border-style: solid; padding: 1cm;"
+        />
+
+        <img 
+            src="assests/infinite.jpg" 
+            alt="infinite" 
+            style="border-style: solid; padding: 1cm; margin-top: 1cm;"
+        />
+        
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div style="padding-top: 300px;"></div>
+
+        <!-- Position -->
+
+        <!-- Position: Static -->
+        <img class="img-static" src="assests/porsche.jpg" alt="static" />
+
+        <!-- Postion: Relative -->
+        <img class="img-relative" src="assests/porsche.jpg" alt="relative" />
+
+        <!-- position: Fixed -->
+        <img class="img-fixed" src="assests/porsche.jpg" alt="fixed" />
+
+        <!-- position: sticky -->
+        <img class="img-sticky" src="assests/porsche.jpg" alt="sticky" />
+
+        <!-- position: absolute -->
+        <div class="absolute-div">
+            <img class="sky" src="assests/sky.jpg" alt="sky_image" />
+            <h2 class="sky-text">Nature</h2>
+        </div>
+
+        <div style="padding-top: 300px;"></div>
+
+        <style>
+            .img-static {
+                position: static;
+            }
+
+            .img-relative { 
+                position:relative;
+                top:40px; /* use margin-top */
+            }
+
+            .img-fixed {
+                position: fixed;
+                bottom:0;
+                right:0;
+                z-index:-1;
+            }
+
+            .img-sticky {  /* toggles as the postion give acts as relative first */
+                position:sticky;
+                bottom:0;
+                left:0;
+            }
+
+            .sky {
+                width:100%;
+            }
+
+            .absolute-div {
+                position:relative;
+            }
+            .sky-text {
+                position: absolute;
+                top:10%;
+                right:50%;
+            }
+        </style>
+
+        <!-- over flow -->
+        <div class = "overflow_visible box">
+            This is big paragraph. This is big paragraph. This is big paragraph.
+        </div>
+
+        <div class = "overflow_hidden box">
+            This is big paragraph. This is big paragraph. This is big paragraph of VISIBLE.
+        </div>
+
+        <div class = "overflow_scroll box">
+            This is big paragraph. This is HIDDEN overflow property. This is big paragraph.
+        </div>
+
+        <div class = "overflow_auto box">
+            This is big paragraph. This is AUTO overflow property. This is big paragraph.
+        </div>
+
+        <div style="padding-top: 300px;"></div>
+        <style>
+            .box {
+                margin: 1cm;
+                width: 200px;
+                height: 40px;
+                border-style: solid;
+            }
+            
+            .overflow_visible{
+                overflow:visible;
+            }
+
+            .overflow_hidden{
+                overflow: hidden;
+            }    
+
+            .overflow_scroll{
+                overflow: scroll;
+            }
+
+            .overflow_auto{
+                overflow: auto;
+            }
+        </style>
+    </body>
+</html>

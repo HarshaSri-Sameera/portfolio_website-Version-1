@@ -1,0 +1,37 @@
+<!-- Precedence and Specificity -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS specificity and precedence</title>
+    <style>
+        .heading{
+            color: tomato !important;  
+        }
+        h2[spellcheck="false"]{
+            color: blue; 
+        }
+        #secondbuc{
+            color: greenyellow;
+        }
+        .secondbuc{
+            color:aqua;
+        }
+    </style>
+</head>
+<body>
+    <!-- first bucket(!imortant, inline, Inheritence) from left to right decreasing order-->
+    <div style="color:violet;"> <!--Inherited CSS property, but the inline style property has more precednce-->
+        <h1 class="heading" style="color:brown">Specificity and Precedence</h1>
+        <h3>CSS</h3>
+    </div>
+    <br/>
+    <!-- second bucket(id selectors, attribute selectors, class selectors, HTML selectors)-->
+    <div>
+        <h2 class="secondbuc" id="secondbuc" spellcheck="false">Second Bucket</h2>
+        <h4>precedence</h4>
+    </div>
+</body>
+</html>
